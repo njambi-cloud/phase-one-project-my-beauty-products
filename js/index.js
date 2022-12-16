@@ -1,6 +1,6 @@
 
 let myShop = document.getElementById("shop")
-myShop.addEventListener("click", render)
+myShop.addEventListener("click", render, {once : true})
 
 
 function render () {
@@ -14,7 +14,9 @@ function render () {
                 header4.appendChild(ul1)
                 let li1 = document.createElement("li")
                 li1.textContent=product.name
+                li1.style.listStyleType= "none"
                 ul1.appendChild(li1)
+                
             })
         })
 }
