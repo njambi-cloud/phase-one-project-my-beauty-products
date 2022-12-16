@@ -1,0 +1,26 @@
+/* p{
+    color: green;
+} */
+body{
+    background-image: url("/assets/pexels-karolina-grabowska-5632393.jpg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    height: 100vh;
+    background-size: cover;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgb(2, 255, 255);
+    box-shadow: 5px 4px #6f6f6f;
+}
+.links{
+    display: flex;
+    list-style-type: none;
+    padding-right: 30px;
+}
+.links > li{
+    padding-right: 50px;
+}
