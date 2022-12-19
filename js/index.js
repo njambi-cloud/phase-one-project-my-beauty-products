@@ -41,10 +41,15 @@ function render () {
                     diV.appendChild(prc)
                     diV.appendChild(lks)
 
+                let amount = document.createElement("input")
+                amount.setAttribute("placeholder", "Quantity") 
+                amount.style.width= "65px"
+                amount.setAttribute("type", "number") 
+                diV.appendChild(amount)
                 let add= document.createElement("button")
                 add.textContent= "Add to Cart"
                 diV.appendChild(add)
-                add.addEventListener("click", onAdd)
+                add.addEventListener("click", onAdd, {once : true})
                 function onAdd() {
                     let cart = document.querySelector("#icon")
                     let cartDiv = document.createElement("div")
@@ -55,7 +60,7 @@ function render () {
                     let post = cartDiv.style.position= "absolute"
                     post.top="20px"
 
-                    cart.addEventListener("click", onclickCart )
+                    cart.addEventListener("click", onclickCart, {once : true} )
                     function onclickCart() {
                         let par = document.createElement("p")
                         par.textContent= product.name
@@ -70,6 +75,10 @@ function render () {
                 
             })
         })
+}
+
+function handleSubmit(){
+
 }
 let homebtn= document.getElementById("home")
 homebtn.addEventListener("click", ()=> myShop.removeChild(myShop.children[0]) )
