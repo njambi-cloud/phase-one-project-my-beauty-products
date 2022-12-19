@@ -51,16 +51,17 @@ function render () {
                     diV.appendChild(prc)
                     diV.appendChild(liking)
                 lkIcon.addEventListener("click", handleClick)
-                    function handleClick(){
-                        product.likes += 1
-                        lks.textContent = `${product.likes} likes`
+                    function handleClick(e){
+                        e.preventDefault()
+                        let lkCount = product.likes + 1
+                        lks.textContent = `${lkCount} likes`
                         fetch(`http://localhost:3000/products/${product.id}`,{
                              method: "PATCH",
                              headers: {
                                  'Content-Type': 'application/json'
             
                                     },
-                             body: JSON.stringify({likes:product.likes})
+                             body: JSON.stringify({likes:lkCount})
                                 }).then(res => res.json()).then(product => product.likes.textContent = product.likes )
                     
                     }
@@ -77,29 +78,8 @@ function render () {
                 add.textContent= "Add to Cart"
                 form.appendChild(add)
                 form.addEventListener("submit",handleSubmit, {once : true})
-                    function handleSubmit(e){
-                        e.preventDefault()
-                        let newObj = {
-                            // stock: e.target.value
-                            name: product.name,
-                            price: product.price,
-                            stock: product.stock - e.target.value,
-                            description: product.desc,
-                            image: product.image,
-                            likes: product.likes
-                        }
-                        fetch(`http://localhost:3000/products/${product.id}`, {
-                            method: "POST",
-                            headers: {
-                                "Content-Type": "application/json"
-                            },
-                            body: JSON.stringify(newObj)
-                        })
-                            .then((res)=> res.json())
-                            .then((products)=> console.log(products))
-                    
-                    }
-                    let cart = document.querySelector("#icon")
+
+                let cart = document.querySelector("#icon")
                     let cartDiv = document.createElement("div")
                     cartDiv.textContent = 2
                     cartDiv.style.display="none"
@@ -115,6 +95,21 @@ function render () {
                         cartDiv.appendChild(par)
                         console.log(par)
                     }
+                    function handleSubmit(e){
+                        e.preventDefault()
+                        let myInput =e.target.value
+                        let newStock = product.stock - parseInt(myInput, 10)
+                        fetch(`http://localhost:3000/products/${product.id}`,{
+                             method: "PATCH",
+                             headers: {
+                                 'Content-Type': 'application/json'
+            
+                                    },
+                             body: JSON.stringify({stock:newStock})
+                                }).then(res => res.json()).then(product => product.stock.textContent = product.stock )
+                    
+                    }
+                    
 
                 }
                 
