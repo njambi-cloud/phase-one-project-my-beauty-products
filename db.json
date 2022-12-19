@@ -1,50 +1,49 @@
 {
-    "products": [
-      {
-        "id": 1,
-        "name": "Koolshooters",
-        "price": 4100,
-        "stock": 42,
-        "description": "Shield skin from sunburn and premature aging with Cosrx Aloe Soothing Sun Cream with SPF50. Formulated with Aloe, the ultra-hydrating sunscreen absorbs quickly into skin to defend against sun damage whilst delivering long-lasting moisture and hydration to leave skin smooth, comfortable and replenished. Provides superior protection without greasy or sticky residue",
-        "image": "https://images.pexels.com/photos/3633850/pexels-photo-3633850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "likes": 0
-      },
-      {
-        "id": 2,
-        "name": "Venus",
-        "price": 3500,
-        "stock": 33,
-        "description": "Shield skin from sunburn and premature aging with Cosrx Aloe Soothing Sun Cream with SPF50. Formulated with Aloe, the ultra-hydrating sunscreen absorbs quickly into skin to defend against sun damage whilst delivering long-lasting moisture and hydration to leave skin smooth, comfortable and replenished. Provides superior protection without greasy or sticky residue",
-        "image": "https://images.pexels.com/photos/2586073/pexels-photo-2586073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "likes": 0
-      },
-      {
-        "id": 3,
-        "name": "Hazelwood",
-        "price": 1900,
-        "stock": 14,
-        "description": "Shield skin from sunburn and premature aging with Cosrx Aloe Soothing Sun Cream with SPF50. Formulated with Aloe, the ultra-hydrating sunscreen absorbs quickly into skin to defend against sun damage whilst delivering long-lasting moisture and hydration to leave skin smooth, comfortable and replenished. Provides superior protection without greasy or sticky residue",
-        "image": "https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "likes": 0
-      },
-      {
-        "id": 4,
-        "name": "Harper Sunday",
-        "price": 1400,
-        "stock": 15,
-        "description": "Shield skin from sunburn and premature aging with Cosrx Aloe Soothing Sun Cream with SPF50. Formulated with Aloe, the ultra-hydrating sunscreen absorbs quickly into skin to defend against sun damage whilst delivering long-lasting moisture and hydration to leave skin smooth, comfortable and replenished. Provides superior protection without greasy or sticky residue",
-        "image": "https://images.pexels.com/photos/2866796/pexels-photo-2866796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "likes": 0
-      },
-      {
-        "id": 5,
-        "name": "Shiny Diamond",
-        "price": 2500,
-        "stock": 51,
-        "description": "Shield skin from sunburn and premature aging with Cosrx Aloe Soothing Sun Cream with SPF50. Formulated with Aloe, the ultra-hydrating sunscreen absorbs quickly into skin to defend against sun damage whilst delivering long-lasting moisture and hydration to leave skin smooth, comfortable and replenished. Provides superior protection without greasy or sticky residue",
-        "image": "https://images.pexels.com/photos/3750640/pexels-photo-3750640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        "likes": 0
-      }
-      
-    ]
-  }
+  "products": [
+    {
+      "id": 1,
+      "name": "Koolshooters",
+      "price": 4100,
+      "stock": 42,
+      "description": "Shield skin from sunburn and premature aging with Cosrx Aloe Soothing Sun Cream with SPF50. Formulated with Aloe, the ultra-hydrating sunscreen absorbs quickly into skin to defend against sun damage whilst delivering long-lasting moisture and hydration to leave skin smooth, comfortable and replenished. Provides superior protection without greasy or sticky residue",
+      "image": "https://images.pexels.com/photos/3633850/pexels-photo-3633850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "likes": 0
+    },
+    {
+      "id": 2,
+      "name": "Venus",
+      "price": 3500,
+      "stock": 33,
+      "description": "Shield skin from sunburn and premature aging with Cosrx Aloe Soothing Sun Cream with SPF50. Formulated with Aloe, the ultra-hydrating sunscreen absorbs quickly into skin to defend against sun damage whilst delivering long-lasting moisture and hydration to leave skin smooth, comfortable and replenished. Provides superior protection without greasy or sticky residue",
+      "image": "https://images.pexels.com/photos/2586073/pexels-photo-2586073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "likes": 0
+    },
+    {
+      "id": 3,
+      "name": "Hazelwood",
+      "price": 1900,
+      "stock": 14,
+      "description": "Shield skin from sunburn and premature aging with Cosrx Aloe Soothing Sun Cream with SPF50. Formulated with Aloe, the ultra-hydrating sunscreen absorbs quickly into skin to defend against sun damage whilst delivering long-lasting moisture and hydration to leave skin smooth, comfortable and replenished. Provides superior protection without greasy or sticky residue",
+      "image": "https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "likes": 0
+    },
+    {
+      "id": 4,
+      "name": "Harper Sunday",
+      "price": 1400,
+      "stock": 15,
+      "description": "Shield skin from sunburn and premature aging with Cosrx Aloe Soothing Sun Cream with SPF50. Formulated with Aloe, the ultra-hydrating sunscreen absorbs quickly into skin to defend against sun damage whilst delivering long-lasting moisture and hydration to leave skin smooth, comfortable and replenished. Provides superior protection without greasy or sticky residue",
+      "image": "https://images.pexels.com/photos/2866796/pexels-photo-2866796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "likes": 0
+    },
+    {
+      "id": 5,
+      "name": "Shiny Diamond",
+      "price": 2500,
+      "stock": 51,
+      "description": "Shield skin from sunburn and premature aging with Cosrx Aloe Soothing Sun Cream with SPF50. Formulated with Aloe, the ultra-hydrating sunscreen absorbs quickly into skin to defend against sun damage whilst delivering long-lasting moisture and hydration to leave skin smooth, comfortable and replenished. Provides superior protection without greasy or sticky residue",
+      "image": "https://images.pexels.com/photos/3750640/pexels-photo-3750640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "likes": 0
+    }
+  ]
+}

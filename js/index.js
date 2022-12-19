@@ -33,24 +33,58 @@ function render () {
                     desc.textContent= product.description
                     let prc = document.createElement("p")
                     prc.textContent= `Kshs. ${product.price}`
+                    let liking = document.createElement("div")
+                    liking.style.display="flex"
+                    liking.style.flexDirection="row"
+                    let lkIcon = document.createElement("div")
+                    lkIcon.innerHTML='<i class="fa fa-heart" style="font-size:20px;color:blue"></i>'
+                    lkIcon.style.paddingTop="15px"
+                    lkIcon.style.paddingRight="10px"
                     let lks = document.createElement("p")
+                    // lkIcon.appendChild(lks)
                     lks.textContent= `${product.likes} likes`
+                    liking.appendChild(lkIcon)
+                    liking.appendChild(lks)
                     diV.appendChild(image)
                     diV.appendChild(headerS)
                     diV.appendChild(desc)
                     diV.appendChild(prc)
-                    diV.appendChild(lks)
-
+                    diV.appendChild(liking)
+                
+                let form = document.createElement("form")
+                diV.appendChild(form)
                 let amount = document.createElement("input")
                 amount.setAttribute("placeholder", "Quantity") 
                 amount.style.width= "65px"
                 amount.setAttribute("type", "number") 
-                diV.appendChild(amount)
-                let add= document.createElement("button")
+                form.appendChild(amount)
+                let add= document.createElement("input")
+                add.setAttribute("type", "submit")
                 add.textContent= "Add to Cart"
-                diV.appendChild(add)
-                add.addEventListener("click", onAdd, {once : true})
-                function onAdd() {
+                form.appendChild(add)
+                form.addEventListener("submit",handleSubmit, {once : true})
+                    function handleSubmit(e){
+                        e.preventDefault()
+                        let newObj = {
+                            // stock: e.target.value
+                            name: product.name,
+                            price: product.price,
+                            stock: product.stock - e.target.value,
+                            description: product.desc,
+                            image: product.image,
+                            likes: product.likes
+                        }
+                        fetch(`http://localhost:3000/products/${product.id}`, {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify(newObj)
+                        })
+                            .then((res)=> res.json())
+                            .then((products)=> console.log(products))
+                    
+                    }
                     let cart = document.querySelector("#icon")
                     let cartDiv = document.createElement("div")
                     cartDiv.textContent = 2
@@ -67,9 +101,6 @@ function render () {
                         cartDiv.appendChild(par)
                         console.log(par)
                     }
-                }
-
-
 
                 }
                 
@@ -77,8 +108,6 @@ function render () {
         })
 }
 
-function handleSubmit(){
 
-}
 let homebtn= document.getElementById("home")
 homebtn.addEventListener("click", ()=> myShop.removeChild(myShop.children[0]) )
