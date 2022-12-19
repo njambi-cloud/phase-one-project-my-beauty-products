@@ -24,8 +24,11 @@ function render () {
                 function display() {
                     let div1 = document.createElement("div")
                     let diV = document.createElement("div")
+                    let div2 =document.createElement("div")
                     div1.appendChild(diV)
-                    diV.style.padding="10px"
+                    diV.appendChild(div2)
+                    diV.style.display="flex"
+                    diV.style.padding="15px"
                     diV.addEventListener("click", hide)
 
                     function hide() {
@@ -33,14 +36,20 @@ function render () {
                         diV.style.backgroundColor=""
                     }
                     diV.style.backgroundColor="rgb(216, 243, 251)"
+                    diV.style.width= "750px"
+                    diV.style.borderRadius="20px"
+                    diV.style.marginLeft="200px"
                     li1.appendChild(diV)
                     let image = document.createElement("img")
                     image.src= product.image
-                    image.style.width="150px"
+                    image.style.width="300px"
+                    image.style.borderRadius="20px"
+                    image.style.marginLeft="20px"
                     let headerS= document.createElement("h5")
                     headerS.textContent= product.name
                     let desc = document.createElement("p")
                     desc.textContent= product.description
+                    desc.style.width = "400px"
                     let prc = document.createElement("p")
                     prc.textContent= `Kshs. ${product.price}`
                     let liking = document.createElement("div")
@@ -56,10 +65,10 @@ function render () {
                     liking.appendChild(lkIcon)
                     liking.appendChild(lks)
                     diV.appendChild(image)
-                    diV.appendChild(headerS)
-                    diV.appendChild(desc)
-                    diV.appendChild(prc)
-                    diV.appendChild(liking)
+                    div2.appendChild(headerS)
+                    div2.appendChild(desc)
+                    div2.appendChild(prc)
+                    div2.appendChild(liking)
                 lkIcon.addEventListener("click", handleClick)
                     function handleClick(e){
                         e.preventDefault()
@@ -77,7 +86,7 @@ function render () {
                     }
                 
                 let form = document.createElement("form")
-                diV.appendChild(form)
+                div2.appendChild(form)
                 let amount = document.createElement("input")
                 amount.setAttribute("placeholder", "Quantity") 
                 amount.style.width= "65px"
