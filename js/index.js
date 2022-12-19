@@ -50,6 +50,7 @@ function render () {
                     let desc = document.createElement("p")
                     desc.textContent= product.description
                     desc.style.width = "400px"
+                    desc.style.fontWeight= "normal"
                     let prc = document.createElement("p")
                     prc.textContent= `Kshs. ${product.price}`
                     let liking = document.createElement("div")
@@ -62,6 +63,8 @@ function render () {
                     let lks = document.createElement("p")
                     // lkIcon.appendChild(lks)
                     lks.textContent= `${product.likes} likes`
+                    lks.style.fontWeight= "normal"
+                    lks.style.fontStyle="italic"
                     liking.appendChild(lkIcon)
                     liking.appendChild(lks)
                     diV.appendChild(image)
@@ -109,9 +112,11 @@ function render () {
 
                     cart.addEventListener("click", onclickCart, {once : true} )
                     function onclickCart() {
+                        ourDiv.textContent=""
                         let par = document.createElement("p")
                         par.textContent= product.name
-                        cartDiv.appendChild(par)
+                        document.body.append(par)
+                        // cartDiv.appendChild(par)
                         console.log(par)
                     }
                     function handleSubmit(e){
