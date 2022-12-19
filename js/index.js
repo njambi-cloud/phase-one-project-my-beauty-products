@@ -22,7 +22,17 @@ function render () {
 
                 li1.addEventListener("click", display, {once : true})
                 function display() {
+                    let div1 = document.createElement("div")
                     let diV = document.createElement("div")
+                    div1.appendChild(diV)
+                    diV.style.padding="10px"
+                    diV.addEventListener("click", hide)
+
+                    function hide() {
+                        diV.textContent=""
+                        diV.style.backgroundColor=""
+                    }
+                    diV.style.backgroundColor="rgb(216, 243, 251)"
                     li1.appendChild(diV)
                     let image = document.createElement("img")
                     image.src= product.image
@@ -115,8 +125,11 @@ function render () {
                 
             })
         })
+let homebtn= document.getElementById("home")
+homebtn.addEventListener("click", handleClear)
+function handleClear (){
+ourDiv.textContent=""
+}
 }
 
 
-let homebtn= document.getElementById("home")
-homebtn.addEventListener("click", ()=> myShop.removeChild(myShop.children[0]) )
