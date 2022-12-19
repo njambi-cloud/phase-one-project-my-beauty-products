@@ -2,7 +2,6 @@
 let myShop = document.getElementById("shop")
 myShop.addEventListener("click", render, {once : true})
 
-
 function render () {
     let ourDiv = document.querySelector(".ourdiv")
     fetch("http://localhost:3000/products")
@@ -85,7 +84,6 @@ function render () {
                                     },
                              body: JSON.stringify({likes:lkCount})
                                 }).then(res => res.json()).then(product => product.likes.textContent = product.likes )
-                    
                     }
                 
                 let form = document.createElement("form")
@@ -94,6 +92,7 @@ function render () {
                 amount.setAttribute("placeholder", "Quantity") 
                 amount.style.width= "65px"
                 amount.setAttribute("type", "number") 
+                amount.style.marginRight="10px"
                 form.appendChild(amount)
                 let add= document.createElement("input")
                 add.setAttribute("type", "submit")
@@ -131,12 +130,8 @@ function render () {
                                     },
                              body: JSON.stringify({stock:newStock})
                                 }).then(res => res.json()).then(product => product.stock.textContent = product.stock )
-                    
                     }
-                    
-
                 }
-                
             })
         })
 let homebtn= document.getElementById("home")
