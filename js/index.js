@@ -50,6 +50,20 @@ function render () {
                     diV.appendChild(desc)
                     diV.appendChild(prc)
                     diV.appendChild(liking)
+                lkIcon.addEventListener("click", handleClick)
+                    function handleClick(){
+                        product.likes += 1
+                        lks.textContent = `${product.likes} likes`
+                        fetch(`http://localhost:3000/products/${product.id}`,{
+                             method: "PATCH",
+                             headers: {
+                                 'Content-Type': 'application/json'
+            
+                                    },
+                             body: JSON.stringify({likes:product.likes})
+                                }).then(res => res.json()).then(product => product.likes.textContent = product.likes )
+                    
+                    }
                 
                 let form = document.createElement("form")
                 diV.appendChild(form)
