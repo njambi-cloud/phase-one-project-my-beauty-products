@@ -19,6 +19,7 @@ function render () {
                 li1.textContent=product.name
                 li1.style.listStyleType= "none"
                 ul1.appendChild(li1)
+
                 li1.addEventListener("click", display, {once : true})
                 function display() {
                     let diV = document.createElement("div")
@@ -39,6 +40,30 @@ function render () {
                     diV.appendChild(desc)
                     diV.appendChild(prc)
                     diV.appendChild(lks)
+
+                let add= document.createElement("button")
+                add.textContent= "Add to Cart"
+                diV.appendChild(add)
+                add.addEventListener("click", onAdd)
+                function onAdd() {
+                    let cart = document.querySelector("#icon")
+                    let cartDiv = document.createElement("div")
+                    cartDiv.textContent = 2
+                    cartDiv.style.display="none"
+                    cart.appendChild(cartDiv)
+                    cart.style.position="relative"
+                    let post = cartDiv.style.position= "absolute"
+                    post.top="20px"
+
+                    cart.addEventListener("click", onclickCart )
+                    function onclickCart() {
+                        let par = document.createElement("p")
+                        par.textContent= product.name
+                        cartDiv.appendChild(par)
+                        console.log(par)
+                    }
+                }
+
 
 
                 }
