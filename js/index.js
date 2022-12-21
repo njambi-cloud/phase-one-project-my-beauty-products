@@ -112,13 +112,26 @@ function render () {
                     cart.addEventListener("click", onclickCart, {once : true} )
                     function onclickCart() {
                         ourDiv.textContent=""
-                        let par = document.createElement("p")
+                        let antDiv = document.createElement("div")
+                        document.body.append(antDiv)
+                        let parDiv = document.createElement("div")
+                        antDiv.appendChild(parDiv)
+                        let par = document.createElement("h6")
+                        let array= []
+                        array.push(product.price)
+                        let count=0
+                        for(let i=0; i<array.length; i++){
+                            count= count + array[i]
+                        }
+                        let nwP = document.createElement("p")
+                        antDiv.appendChild(nwP)
+                        nwP.textContent=count
                         par.textContent= product.name
-                        document.body.append(par)
+                        parDiv.appendChild(par)
                         let deleteBtn = document.createElement("button")
                         deleteBtn.textContent="X"
                         deleteBtn.style.marginLeft="10px"
-                        par.appendChild(deleteBtn)
+                        antDiv.appendChild(deleteBtn)
                         // cartDiv.appendChild(par)
                         console.log(par)
                     }
