@@ -1,5 +1,6 @@
 
 let myShop = document.getElementById("shop")
+let homeText= document.querySelector(".text")
 myShop.addEventListener("click", render, {once : true})
 
 function render () {
@@ -12,6 +13,7 @@ function render () {
                 header4.textContent= "Our products"
                 ourDiv.appendChild(header4)
             products.map((product)=> {
+                homeText.innerHTML=""
                 let ul1 = document.createElement("ul")
                 header4.appendChild(ul1)
                 let li1 = document.createElement("li")
@@ -157,7 +159,10 @@ let homebtn= document.getElementById("home")
 homebtn.addEventListener("click", handleClear)
 function handleClear (){
 ourDiv.textContent=""
+homeText.innerHTML='<h3>Your trusted home of beauty!</h3>'
 }
+let homePar = document.querySelector("#homtext")
+homePar.textContent='Just at a click of a button, we got you covered with the best beauty products</p>'
 }
 
 
