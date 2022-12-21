@@ -133,7 +133,7 @@ function render () {
                         deleteBtn.style.marginLeft="10px"
 
                         deleteBtn.addEventListener("click", () =>antDiv.innerHTML="")
-                        antDiv.appendChild(deleteBtn)
+                        par.appendChild(deleteBtn)
                         // cartDiv.appendChild(par)
                         console.log(par)
                     }
