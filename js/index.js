@@ -28,7 +28,7 @@ function render () {
                     diV.appendChild(div2)
                     diV.style.display="flex"
                     diV.style.padding="15px"
-                    diV.addEventListener("click", hide)
+                    li1.addEventListener("click", hide)
 
                     function hide() {
                         diV.textContent=""
