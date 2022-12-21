@@ -115,6 +115,10 @@ function render () {
                         let par = document.createElement("p")
                         par.textContent= product.name
                         document.body.append(par)
+                        let deleteBtn = document.createElement("button")
+                        deleteBtn.textContent="X"
+                        deleteBtn.style.marginLeft="10px"
+                        par.appendChild(deleteBtn)
                         // cartDiv.appendChild(par)
                         console.log(par)
                     }
