@@ -131,6 +131,8 @@ function render () {
                         let deleteBtn = document.createElement("button")
                         deleteBtn.textContent="X"
                         deleteBtn.style.marginLeft="10px"
+
+                        deleteBtn.addEventListener("click", () =>antDiv.innerHTML="")
                         antDiv.appendChild(deleteBtn)
                         // cartDiv.appendChild(par)
                         console.log(par)
